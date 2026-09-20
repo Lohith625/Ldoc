@@ -1,0 +1,20 @@
+﻿# Login Across a Distributed System
+
+A login crosses an API gateway, authentication server, database and audit queue before the client receives a session.
+
+@animate
+client: Client
+router: Gateway
+server: Auth Server
+database: Database
+queue: Audit Queue
+
+client sends LOGIN to router
+router sends VERIFY USER to server
+server sends FIND USER to database
+database replies USER ROW to server
+server sends LOGIN EVENT to queue
+queue replies STORED to server
+server replies ACCESS TOKEN to router
+router replies SESSION to client
+@end

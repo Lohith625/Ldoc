@@ -1,0 +1,15 @@
+﻿# How the Web Works
+
+A compact mind map of the journey from entering a URL to seeing a page.
+
+@animate
+# How the Web Works
+- Browser
+  - Parses the URL and renders the page
+- Network
+  - DNS and HTTPS find and protect the route
+- Server
+  - Application and database prepare the result
+- Response
+  - Assets arrive and the page becomes interactive
+@end

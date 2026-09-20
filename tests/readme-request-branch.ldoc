@@ -1,0 +1,10 @@
+# Request handling
+
+Every request passes an auth check before it reaches a service.
+
+@animate
+A request arrives at the gateway
+The token is checked
+if the token is valid then the request continues to the service
+otherwise the request is rejected with 401
+@end

@@ -1,0 +1,19 @@
+# Add response caching
+
+This PR puts a cache in front of the database.
+
+@animate
+Before: every request hits the database, 240ms p95, database is the bottleneck
+After: repeat requests served from cache, 12ms p95, database load down 80%
+@end
+
+The new read path:
+
+@animate
+api: API
+cache: Cache
+db: Database
+
+api sends LOOKUP to cache
+cache replies HIT to api
+@end

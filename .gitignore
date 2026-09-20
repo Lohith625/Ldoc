@@ -1,0 +1,14 @@
+node_modules/
+out/
+*.vsix
+.vscode-test/
+.env
+.env.*
+!.env.example
+*.log
+tests/fixtures/**/*.html
+tests/fixtures/**/*.png
+examples/**/*.html
+examples/**/index.html
+.DS_Store
+Thumbs.db

@@ -1,0 +1,17 @@
+# Authentication
+
+How a login request travels through the system.
+
+@animate
+user: User
+web: Web App
+auth: Auth Service
+db: Database
+
+user sends CREDENTIALS to web
+web sends VERIFY to auth
+auth sends LOOKUP to db
+db replies USER ROW to auth
+auth replies JWT to web
+web replies SESSION to user
+@end

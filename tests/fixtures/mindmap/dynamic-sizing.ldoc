@@ -1,0 +1,22 @@
+# Dynamic branch sizing
+
+Try adding another sentence to the longer branch. Its box grows and moves outward; neighbouring branches adjust to leave room. Remove the sentence and the layout becomes compact again.
+
+@animate
+# Explaining a system
+- Requests
+  - A client sends a request
+- Authentication
+  - Verify the supplied credentials before allowing access to protected resources
+  - Return a clear error when credentials are missing or invalid
+- Caching and keeping stored responses up to date
+  - A cached response can avoid repeating an expensive database query when the requested data has not changed
+  - When the source data changes, invalidate the affected cache entry so the next request rebuilds it from current data
+  - Give temporary cache entries an expiry time
+- Storage
+  - Store the durable data
+- Background jobs
+  - Put slow work in a queue
+- Response
+  - Send the result to the client
+@end

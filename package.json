@@ -1,0 +1,145 @@
+{
+  "name": "ldoc-preview",
+  "displayName": "LDOC - Living Documents",
+  "icon": "images/icon.png",
+  "description": "Write plain text. Get animated, hand-drawn explainer documents.",
+  "version": "0.1.2",
+  "publisher": "lohith-m",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lohith625/Ldoc.git"
+  },
+  "homepage": "https://github.com/Lohith625/Ldoc#readme",
+  "bugs": {
+    "url": "https://github.com/Lohith625/Ldoc/issues"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Programming Languages"
+  ],
+  "keywords": [
+    "ldoc",
+    "diagram",
+    "animation",
+    "explainer",
+    "markdown"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "ldoc",
+        "aliases": [
+          "LDOC",
+          "ldoc"
+        ],
+        "extensions": [
+          ".ldoc"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "ldoc.showPreview",
+        "title": "Open Preview",
+        "category": "LDOC",
+        "icon": "$(open-preview)"
+      },
+      {
+        "command": "ldoc.exportHtml",
+        "title": "Export to HTML",
+        "category": "LDOC"
+      },
+      {
+        "command": "ldoc.setupAI",
+        "title": "Set Up AI",
+        "category": "LDOC"
+      },
+      {
+        "command": "ldoc.generateAnimation",
+        "title": "Generate Animation from Text (AI)",
+        "category": "LDOC"
+      },
+      {
+        "command": "ldoc.drawObject",
+        "title": "Draw an Object (AI)",
+        "category": "LDOC"
+      },
+      {
+        "command": "ldoc.forgetShapes",
+        "title": "Forget Generated Shapes",
+        "category": "LDOC"
+      },
+      {
+        "command": "ldoc.setApiKey",
+        "title": "Set API Key",
+        "category": "LDOC"
+      },
+      {
+        "command": "ldoc.clearApiKey",
+        "title": "Clear Stored API Key",
+        "category": "LDOC"
+      }
+    ],
+    "configuration": {
+      "title": "LDOC",
+      "properties": {
+        "ldoc.llm.provider": {
+          "type": "string",
+          "enum": [
+            "anthropic",
+            "openai",
+            "gemini",
+            "openai-compatible"
+          ],
+          "default": "anthropic",
+          "markdownDescription": "Provider for the optional AI feature. `openai-compatible` targets any OpenAI-shaped endpoint, including a local model via Ollama or LM Studio. LDOC works fully without this \u2014 no key means no AI, not a reduced feature set."
+        },
+        "ldoc.llm.model": {
+          "type": "string",
+          "default": "",
+          "description": "Model id. Leave empty to use the provider's default."
+        },
+        "ldoc.llm.baseUrl": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Base URL for `openai-compatible`. Defaults to `http://localhost:11434/v1` (Ollama).\n\nOther services that speak the same protocol:\n- Groq \u2014 `https://api.groq.com/openai/v1`\n- xAI (Grok) \u2014 `https://api.x.ai/v1`\n- OpenRouter \u2014 `https://openrouter.ai/api/v1`"
+        },
+        "ldoc.autoPreview": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically open the preview beside a .ldoc file without moving focus from the editor."
+        }
+      }
+    },
+    "menus": {
+      "editor/title": [
+        {
+          "command": "ldoc.showPreview",
+          "when": "resourceExtname == .ldoc",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile",
+    "test": "npm run compile && node --test tests/*.test.cjs",
+    "package": "npx @vscode/vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "activationEvents": [
+    "onLanguage:ldoc"
+  ]
+}

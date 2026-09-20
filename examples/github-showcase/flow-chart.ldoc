@@ -1,0 +1,11 @@
+﻿# Pull Request Quality Gate
+
+A decision flow makes the two possible outcomes explicit.
+
+@animate
+Developer opens a pull request
+CI installs dependencies and runs tests
+Reviewer checks the design and code
+if every check passes then Merge the pull request
+otherwise Fix the issue and run the checks again
+@end

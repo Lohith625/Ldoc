@@ -1,0 +1,18 @@
+# Java basics
+
+A short map of three ideas. Each branch is written as an ordinary bullet list.
+
+@animate
+# Java basics
+- Integer division
+  - 7 / 2 gives 3
+  - Assigning to double gives 3.0
+- Type promotion
+  - 7 / 2.0 gives 3.5
+  - A double operand changes the division
+- Casting
+  - Cast before division
+  - (double) 7 / 2 gives 3.5
+@end
+
+Integer division happens before an assignment conversion. A later cast cannot recover the fractional part. Keep longer explanations here in the document, rather than adding them to the map.

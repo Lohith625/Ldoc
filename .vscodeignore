@@ -1,0 +1,19 @@
+src/**
+tsconfig.json
+**/*.map
+**/*.ts
+.vscode/**
+node_modules/**
+tests/**
+.github/**
+.git/**
+.gitignore
+package-lock.json
+CONTRIBUTING.md
+examples/**/*.html
+examples/**/*.png
+examples/**/assets/**
+examples/**/index.html
+*.vsix
+*.log
+# engine/, compiled out/*.js, examples/*.ldoc and vendor license files ship.

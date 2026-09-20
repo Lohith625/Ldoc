@@ -1,0 +1,16 @@
+﻿# What Happens After You Click Buy?
+
+A one-way system flow shows how an order travels through independent services.
+
+@animate
+user: Customer
+browser: Storefront
+server: Order API
+database: Orders Database
+queue: Event Queue
+
+user sends PLACE ORDER to browser
+browser sends CHECKOUT to server
+server sends SAVE ORDER to database
+database sends ORDER CREATED to queue
+@end

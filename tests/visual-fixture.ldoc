@@ -1,0 +1,35 @@
+# LDOC visual checks
+
+## Comparison
+
+@animate
+Before: repeat requests hit the database, 240ms p95 response time, extra load during busy hours
+After: repeat requests served from cache, 12ms p95 response time, database load down by 80 percent
+@end
+
+## Sequence
+
+@animate
+book: Lesson Book
+router: API Gateway
+cache: Redis Cache
+queue: Event Queue
+book sends CHAPTER to router
+router sends LOOKUP to cache
+cache replies HIT to router
+router sends EVENT to queue
+queue replies SAVED to router
+router replies LESSON to book
+@end
+
+## How the preview works
+
+@animate
+user: Developer
+laptop: Code Editor
+server: LDOC Engine
+screen: Live Preview
+user sends script to laptop
+laptop sends AST to server
+server produces screen
+@end

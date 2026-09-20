@@ -1,0 +1,24 @@
+# Java at a glance
+
+Top-level bullets surround the main idea. Nested bullets stay inside their branch.
+
+@animate
+# Java basics
+- Java pipeline
+  - Source -> bytecode -> JVM
+- Data types
+  - Primitive values
+  - Object references
+- Integer division
+  - 7 / 2 gives 3
+- Type promotion
+  - 7 / 2.0 gives 3.5
+- Casting
+  - Cast before division
+- Operators
+  - % gives the remainder
+- Strings
+  - + can join text
+- Remember
+  - Check operand types
+@end

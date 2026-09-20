@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a preview, export or AI-generation problem.
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Small LDOC example and steps to reproduce
+      description: Remove private content and API keys.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: LDOC version, VS Code version and operating system
+  - type: input
+    id: provider
+    attributes:
+      label: AI provider and model, if relevant
+      description: Never include your API key.

@@ -1,0 +1,15 @@
+﻿# Follow a Web Request
+
+A long request path demonstrates LDOC's moving camera. It follows each stage and arrow downward, then zooms out to reveal the complete journey.
+
+@animate
+The browser creates an HTTPS request
+DNS resolves the domain to an IP address
+A TCP connection is established
+The load balancer selects a healthy server
+The API gateway authenticates the request
+The application server runs business logic
+The database returns the requested records
+The server builds and sends the response
+The browser renders the result
+@end

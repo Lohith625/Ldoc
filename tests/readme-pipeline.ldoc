@@ -1,0 +1,10 @@
+# CI Pipeline
+
+@animate
+Developer pushes a commit
+Tests run against the branch
+The image is built and tagged
+Staging is updated automatically
+A human approves the release
+Production rolls out gradually
+@end

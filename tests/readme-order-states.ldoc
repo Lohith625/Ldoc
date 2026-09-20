@@ -1,0 +1,8 @@
+# Order lifecycle
+
+@animate
+An order starts as PENDING
+PENDING becomes PAID when payment clears
+PAID becomes SHIPPED when the warehouse dispatches
+SHIPPED becomes DELIVERED on arrival
+@end

@@ -1,0 +1,19 @@
+name: Feedback
+description: Tell us what you tried to explain and where LDOC could improve.
+body:
+  - type: textarea
+    id: explanation
+    attributes:
+      label: What did you want to explain?
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: What worked, and where did you get stuck?
+    validations:
+      required: true
+  - type: textarea
+    id: missing
+    attributes:
+      label: What representation or behavior was missing?
