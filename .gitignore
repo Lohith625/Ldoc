@@ -10,5 +10,6 @@ tests/fixtures/**/*.html
 tests/fixtures/**/*.png
 examples/**/*.html
 examples/**/index.html
+_site/
 .DS_Store
 Thumbs.db

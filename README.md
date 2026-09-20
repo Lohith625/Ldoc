@@ -2,6 +2,8 @@
 
 Write plain text. Get an animated, hand-drawn explainer document.
 
+**[Watch the live animated showcase](https://lohith625.github.io/Ldoc/)**
+
 LDOC reads a `.ldoc` file and renders it live in VS Code — styled prose, plus
 diagrams that draw themselves. You never pick a chart type or tag a style: the
 **shape of what you wrote** decides the picture.
