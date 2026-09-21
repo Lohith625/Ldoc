@@ -445,6 +445,7 @@ water: Groundwater
 
 sun sends ENERGY to tree
 water sends MOISTURE to tree
+tree produces oxygen
 @end
 ```
 
